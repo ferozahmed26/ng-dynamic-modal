@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { EmployeeComponent } from '../employee/employee.component';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule } from '@angular/forms';
-import { BirdComponent } from './bird.component';
+
 const routes: Routes = [
   {path: '',
-    component: BirdComponent,
+    component: EmployeeComponent,
     pathMatch: 'full'},
 ];
+
 @NgModule({
+  declarations: [EmployeeComponent],
   imports: [
     CommonModule,
-    FormsModule,
     RouterModule.forChild(routes)
-  ],
-  declarations: [BirdComponent]
+  ]
 })
-export class BirdModule {
- static components = {'bird': BirdComponent}
+export class ListModule { 
+  static components = {'employee': EmployeeComponent}
 }

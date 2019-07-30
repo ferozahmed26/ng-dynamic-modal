@@ -6,7 +6,8 @@ const routes: Routes = [
   {path: '',
     component: HomeComponent,
     pathMatch: 'full'},
-  { path: 'bird', loadChildren: './bird/bird.module#BirdModule' }
+  { path: 'bird', loadChildren: './bird/bird.module#BirdModule' },
+  { path: 'list', loadChildren: './list/list.module#ListModule' }
 ];
 
 @NgModule({
